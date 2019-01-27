@@ -22,7 +22,11 @@ Optical Character Recognition of documents
 #### 1.3 Загрузите полный репозиторий, расположенный на этой странице. 
 Прокрутите вверх и нажмите клонировать или загрузить и извлеките все содержимое непосредственно в D:\pythonOCR\models\research\object_detection.
 
-#### 1.4 Настройка виртуальной среды Anaconda
+#### 1.4 Загрузите архив с уже обученной нейросетью.
+Если вы не собираетесь самостоятельно производить обучение нейросети загрузите [этот архив](https://yadi.sk/d/rwKJbKtezR8qeQ). Распакуйте его содержимое в каталог D:\pythonOCR\models\research\object_detection
+
+
+#### 1.5 Настройка виртуальной среды Anaconda
 
 
 ```
@@ -57,14 +61,14 @@ D:\> activate pythonOCR
 (pythonOCR) D:\> pip install opencv-python
 ```
 
-#### 1.5 Настройка переменных PYTHONPATH
+#### 1.6 Настройка переменных PYTHONPATH
 
 
 ```
 (pythonOCR) D:\> set PYTHONPATH=D:\pythonOCR\models;D:\pythonOCR\models\research;D:\pythonOCR\models\research\slim
 ```
 
-#### 1.6 Компиляция файлов Protobuf 
+#### 1.7 Компиляция файлов Protobuf 
 
 В командной строке Anaconda перейдите в каталог \models\research, скопируйте и вставьте в командную строку следующую команду и нажмите клавишу Ввод:
 
