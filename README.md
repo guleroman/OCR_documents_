@@ -6,23 +6,27 @@ Optical Character Recognition of documents
 
 
 ## Steps
-### 1. Настройка каталога Tensorflow и виртуальной среды Anaconda
-#### 1.1 Загрузка репозитория Tensorflow Object Detection API с github
+### 1. РќР°СЃС‚СЂРѕР№РєР° РєР°С‚Р°Р»РѕРіР° Tensorflow Рё РІРёСЂС‚СѓР°Р»СЊРЅРѕР№ СЃСЂРµРґС‹ Anaconda
+#### 1.1 Р—Р°РіСЂСѓР·РєР° СЂРµРїРѕР·РёС‚РѕСЂРёСЏ Tensorflow Object Detection API СЃ github
 
-   Создайте папку на диске D: и назовите ее "pythonOCR". Этот рабочий каталог будет содержать все файлы TensorFlow Object Detection, а также обучающие данные, обученную модель нейросети, файлы конфигурации и все остальное, что необходимо для обнаружения интересующих нас объектов.
+   РЎРѕР·РґР°Р№С‚Рµ РїР°РїРєСѓ РЅР° РґРёСЃРєРµ D: Рё РЅР°Р·РѕРІРёС‚Рµ РµРµ "pythonOCR". Р­С‚РѕС‚ СЂР°Р±РѕС‡РёР№ РєР°С‚Р°Р»РѕРі Р±СѓРґРµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ РІСЃРµ С„Р°Р№Р»С‹ TensorFlow Object Detection, Р° С‚Р°РєР¶Рµ РѕР±СѓС‡Р°СЋС‰РёРµ РґР°РЅРЅС‹Рµ, РѕР±СѓС‡РµРЅРЅСѓСЋ РјРѕРґРµР»СЊ РЅРµР№СЂРѕСЃРµС‚Рё, С„Р°Р№Р»С‹ РєРѕРЅС„РёРіСѓСЂР°С†РёРё Рё РІСЃРµ РѕСЃС‚Р°Р»СЊРЅРѕРµ, С‡С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РґР»СЏ РѕР±РЅР°СЂСѓР¶РµРЅРёСЏ РёРЅС‚РµСЂРµСЃСѓСЋС‰РёС… РЅР°СЃ РѕР±СЉРµРєС‚РѕРІ.
 
-Загрузите полный репозиторий TensorFlow Object Detection API, расположенный по адресу https://github.com/tensorflow/models в папку D:\pythonOCR.
+Р—Р°РіСЂСѓР·РёС‚Рµ РїРѕР»РЅС‹Р№ СЂРµРїРѕР·РёС‚РѕСЂРёР№ TensorFlow Object Detection API, СЂР°СЃРїРѕР»РѕР¶РµРЅРЅС‹Р№ РїРѕ Р°РґСЂРµСЃСѓ https://github.com/tensorflow/models РІ РїР°РїРєСѓ D:\pythonOCR.
 
-#### 1.2 Загрузите Faster_RCNN_Resnet101_Kitti из TensorFlow's model zoo
+#### 1.2 Р—Р°РіСЂСѓР·РёС‚Рµ Faster_RCNN_Resnet101_Kitti РёР· TensorFlow's model zoo
 
 
 [Faster_RCNN_Resnet101_Kitti](http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet101_coco_2018_01_28.tar.gz)
-Распакуйте из архива папку faster_rcnn_resnet101_kitti_2018_01_28 в директорию D:\pythonOCR\models\research\object_detection.
+Р Р°СЃРїР°РєСѓР№С‚Рµ РёР· Р°СЂС…РёРІР° РїР°РїРєСѓ faster_rcnn_resnet101_kitti_2018_01_28 РІ РґРёСЂРµРєС‚РѕСЂРёСЋ D:\pythonOCR\models\research\object_detection.
 
-#### 1.3 Загрузите полный репозиторий, расположенный на этой странице. 
-Прокрутите вверх и нажмите клонировать или загрузить и извлеките все содержимое непосредственно в D:\pythonOCR\models\research\object_detection.
+#### 1.3 Р—Р°РіСЂСѓР·РёС‚Рµ РїРѕР»РЅС‹Р№ СЂРµРїРѕР·РёС‚РѕСЂРёР№, СЂР°СЃРїРѕР»РѕР¶РµРЅРЅС‹Р№ РЅР° СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ. 
+РџСЂРѕРєСЂСѓС‚РёС‚Рµ РІРІРµСЂС… Рё РЅР°Р¶РјРёС‚Рµ РєР»РѕРЅРёСЂРѕРІР°С‚СЊ РёР»Рё Р·Р°РіСЂСѓР·РёС‚СЊ Рё РёР·РІР»РµРєРёС‚Рµ РІСЃРµ СЃРѕРґРµСЂР¶РёРјРѕРµ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РІ D:\pythonOCR\models\research\object_detection.
 
-#### 1.4 Настройка виртуальной среды Anaconda
+#### 1.4 Р—Р°РіСЂСѓР·РёС‚Рµ Р°СЂС…РёРІ СЃ СѓР¶Рµ РѕР±СѓС‡РµРЅРЅРѕР№ РЅРµР№СЂРѕСЃРµС‚СЊСЋ.
+Р•СЃР»Рё РІС‹ РЅРµ СЃРѕР±РёСЂР°РµС‚РµСЃСЊ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ РїСЂРѕРёР·РІРѕРґРёС‚СЊ РѕР±СѓС‡РµРЅРёРµ РЅРµР№СЂРѕСЃРµС‚Рё Р·Р°РіСЂСѓР·РёС‚Рµ [СЌС‚РѕС‚ Р°СЂС…РёРІ](https://yadi.sk/d/rwKJbKtezR8qeQ). Р Р°СЃРїР°РєСѓР№С‚Рµ РµРіРѕ СЃРѕРґРµСЂР¶РёРјРѕРµ РІ РєР°С‚Р°Р»РѕРі D:\pythonOCR\models\research\object_detection
+
+
+#### 1.5 РќР°СЃС‚СЂРѕР№РєР° РІРёСЂС‚СѓР°Р»СЊРЅРѕР№ СЃСЂРµРґС‹ Anaconda
 
 
 ```
@@ -57,23 +61,23 @@ D:\> activate pythonOCR
 (pythonOCR) D:\> pip install opencv-python
 ```
 
-#### 1.5 Настройка переменных PYTHONPATH
+#### 1.6 РќР°СЃС‚СЂРѕР№РєР° РїРµСЂРµРјРµРЅРЅС‹С… PYTHONPATH
 
 
 ```
 (pythonOCR) D:\> set PYTHONPATH=D:\pythonOCR\models;D:\pythonOCR\models\research;D:\pythonOCR\models\research\slim
 ```
 
-#### 1.6 Компиляция файлов Protobuf 
+#### 1.7 РљРѕРјРїРёР»СЏС†РёСЏ С„Р°Р№Р»РѕРІ Protobuf 
 
-В командной строке Anaconda перейдите в каталог \models\research, скопируйте и вставьте в командную строку следующую команду и нажмите клавишу Ввод:
+Р’ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРµ Anaconda РїРµСЂРµР№РґРёС‚Рµ РІ РєР°С‚Р°Р»РѕРі \models\research, СЃРєРѕРїРёСЂСѓР№С‚Рµ Рё РІСЃС‚Р°РІСЊС‚Рµ РІ РєРѕРјР°РЅРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ СЃР»РµРґСѓСЋС‰СѓСЋ РєРѕРјР°РЅРґСѓ Рё РЅР°Р¶РјРёС‚Рµ РєР»Р°РІРёС€Сѓ Р’РІРѕРґ:
 
 
 ```
 protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_detection\protos\argmax_matcher.proto .\object_detection\protos\bipartite_matcher.proto .\object_detection\protos\box_coder.proto .\object_detection\protos\box_predictor.proto .\object_detection\protos\eval.proto .\object_detection\protos\faster_rcnn.proto .\object_detection\protos\faster_rcnn_box_coder.proto .\object_detection\protos\grid_anchor_generator.proto .\object_detection\protos\hyperparams.proto .\object_detection\protos\image_resizer.proto .\object_detection\protos\input_reader.proto .\object_detection\protos\losses.proto .\object_detection\protos\matcher.proto .\object_detection\protos\mean_stddev_box_coder.proto .\object_detection\protos\model.proto .\object_detection\protos\optimizer.proto .\object_detection\protos\pipeline.proto .\object_detection\protos\post_processing.proto .\object_detection\protos\preprocessor.proto .\object_detection\protos\region_similarity_calculator.proto .\object_detection\protos\square_box_coder.proto .\object_detection\protos\ssd.proto .\object_detection\protos\ssd_anchor_generator.proto .\object_detection\protos\string_int_label_map.proto .\object_detection\protos\train.proto .\object_detection\protos\keypoint_box_coder.proto .\object_detection\protos\multiscale_anchor_generator.proto .\object_detection\protos\graph_rewriter.proto
 ```
 
-Наконец, выполните следующие команды из каталога D:\pythonOCR\models\research:
+РќР°РєРѕРЅРµС†, РІС‹РїРѕР»РЅРёС‚Рµ СЃР»РµРґСѓСЋС‰РёРµ РєРѕРјР°РЅРґС‹ РёР· РєР°С‚Р°Р»РѕРіР° D:\pythonOCR\models\research:
 
 
 ```
@@ -81,11 +85,11 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 (pythonOCR) D:\pythonOCR\models\research> python setup.py install
 ```
 
-### 2. Запуск 
+### 2. Р—Р°РїСѓСЃРє 
 
 #### 2.1 Jupiter notebook
-Вы можете выполнить распознавание пошагово, запустив OCR_snils.ipynb в Jupyter notebook. 
-В каталоге \object_detection введите следующую команду:
+Р’С‹ РјРѕР¶РµС‚Рµ РІС‹РїРѕР»РЅРёС‚СЊ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёРµ РїРѕС€Р°РіРѕРІРѕ, Р·Р°РїСѓСЃС‚РёРІ OCR_snils.ipynb РІ Jupyter notebook. 
+Р’ РєР°С‚Р°Р»РѕРіРµ \object_detection РІРІРµРґРёС‚Рµ СЃР»РµРґСѓСЋС‰СѓСЋ РєРѕРјР°РЅРґСѓ:
 
 
 ```
@@ -94,7 +98,7 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 
 #### 2.2 OCR_snils.py
 
-Также, вы можете запустить исполняемый файл для распознавания документа из командной строки. В каталоге \object_detection введите следующую команду:
+РўР°РєР¶Рµ, РІС‹ РјРѕР¶РµС‚Рµ Р·Р°РїСѓСЃС‚РёС‚СЊ РёСЃРїРѕР»РЅСЏРµРјС‹Р№ С„Р°Р№Р» РґР»СЏ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РёР· РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё. Р’ РєР°С‚Р°Р»РѕРіРµ \object_detection РІРІРµРґРёС‚Рµ СЃР»РµРґСѓСЋС‰СѓСЋ РєРѕРјР°РЅРґСѓ:
 
 
 ```
