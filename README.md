@@ -23,7 +23,7 @@ Optical Character Recognition of documents
 Прокрутите вверх и нажмите клонировать или загрузить и извлеките все содержимое непосредственно в D:\pythonOCR\models\research\object_detection.
 
 #### 1.4 Загрузите архив с уже обученной нейросетью.
-Если вы не собираетесь самостоятельно производить обучение нейросети загрузите [этот архив](https://yadi.sk/d/rwKJbKtezR8qeQ). Распакуйте его содержимое в каталог D:\pythonOCR\models\research\object_detection
+Если вы не собираетесь самостоятельно производить обучение нейросети загрузите [этот архив](https://yadi.sk/d/ZckJHQ43zhOkPw). Распакуйте его содержимое в каталог D:\pythonOCR\models\research\object_detection
 
 
 #### 1.5 Настройка виртуальной среды Anaconda
