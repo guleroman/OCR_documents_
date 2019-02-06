@@ -102,5 +102,5 @@ protoc --python_out=. .\object_detection\protos\anchor_generator.proto .\object_
 
 
 ```
-(pythonOCR) D:\pythonOCR\models\research\object_detection> python OCR_snils.py --image=snils_data/image10.jpg
+(pythonOCR) D:\pythonOCR\models\research\object_detection> python OCR_snils.py --image=snils_data/image1.jpg
 ```
