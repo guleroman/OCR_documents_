@@ -9,8 +9,8 @@ import tesserocr
 import pandas as pd
 import json
 
-PATH_TO_CKPT = '/content/models/research/object_detection/snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
-PATH_TO_LABELS = '/content/models/research/object_detection/training_snils/labelmap.pbtxt'  # Путь к label-файлу
+PATH_TO_CKPT = '/snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
+PATH_TO_LABELS = '/training_snils/labelmap.pbtxt'  # Путь к label-файлу
 NUM_CLASSES = 1
 
 flags = tf.app.flags
@@ -97,7 +97,7 @@ data = {
     "gender": text[6],   
     "registration": text[7]   
 }
-
+print (data)
 # Производим запись в JSON файл
 with open("data_file.json", "w") as write_file:
     json.dump(data, write_file)
