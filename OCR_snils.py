@@ -9,8 +9,8 @@ import tesserocr
 import pandas as pd
 import json
 
-PATH_TO_CKPT = 'snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
-PATH_TO_LABELS = 'training_snils/labelmap.pbtxt'  # Путь к label-файлу
+PATH_TO_CKPT = '/tensorflow/models/research/object_detection/snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
+PATH_TO_LABELS = '/tensorflow/models/research/object_detection/training_snils/labelmap.pbtxt'  # Путь к label-файлу
 NUM_CLASSES = 1
 
 flags = tf.app.flags
