@@ -73,7 +73,7 @@ table = table * to_pixel
 # Произведем нарезку изображения на интересующие текстовые блоки
 images_new = []
 for i in range(0,j):
-    img = image.crop( int((table['x min'].iloc[i]),int(table['y min'].iloc[i]),int(table['x max'].iloc[i]),int(table['y max'].iloc[i])) ) #дата
+    img = image.crop( (int(table['x min'].iloc[i]),int(table['y min'].iloc[i]),int(table['x max'].iloc[i]),int(table['y max'].iloc[i])) ) #дата
     img.save('cropp_'+str(i)+'.jpg')
     img = cv2.imread('cropp_'+str(i)+'.jpg')
     img = Image.fromarray(cv2.GaussianBlur(img,(3,3),0))
