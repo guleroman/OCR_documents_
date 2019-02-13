@@ -1,4 +1,4 @@
-# python OCR_snils.py --image=snils_data/image10.jpg
+# python OCR_snils.py --image=snils_data/image1.jpg
 
 import numpy as np
 import tensorflow as tf
@@ -9,8 +9,8 @@ import tesserocr
 import pandas as pd
 import json
 
-PATH_TO_CKPT = '/tensorflow/models/research/object_detection/snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
-PATH_TO_LABELS = '/tensorflow/models/research/object_detection/training_snils/labelmap.pbtxt'  # Путь к label-файлу
+PATH_TO_CKPT = '/snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
+PATH_TO_LABELS = '/training_snils/labelmap.pbtxt'  # Путь к label-файлу
 NUM_CLASSES = 1
 
 flags = tf.app.flags
@@ -73,7 +73,7 @@ table = table * to_pixel
 # Произведем нарезку изображения на интересующие текстовые блоки
 images_new = []
 for i in range(0,j):
-    img = image.crop( (table['x min'].iloc[i],table['y min'].iloc[i],table['x max'].iloc[i],table['y max'].iloc[i]) ) #дата
+    img = image.crop( int((table['x min'].iloc[i]),int(table['y min'].iloc[i]),int(table['x max'].iloc[i]),int(table['y max'].iloc[i])) ) #дата
     img.save('cropp_'+str(i)+'.jpg')
     img = cv2.imread('cropp_'+str(i)+'.jpg')
     img = Image.fromarray(cv2.GaussianBlur(img,(3,3),0))
