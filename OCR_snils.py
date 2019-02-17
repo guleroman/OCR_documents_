@@ -9,8 +9,8 @@ import tesserocr
 import pandas as pd
 import json
 
-PATH_TO_CKPT = '/snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
-PATH_TO_LABELS = '/training_snils/labelmap.pbtxt'  # Путь к label-файлу
+PATH_TO_CKPT = 'snils_graph/frozen_inference_graph.pb' # Путь к обученной модели нейросети
+PATH_TO_LABELS = 'training_snils/labelmap.pbtxt'  # Путь к label-файлу
 NUM_CLASSES = 1
 
 flags = tf.app.flags
@@ -73,7 +73,7 @@ table = table * to_pixel
 # Произведем нарезку изображения на интересующие текстовые блоки
 images_new = []
 for i in range(0,j):
-    img = image.crop( int((table['x min'].iloc[i]),int(table['y min'].iloc[i]),int(table['x max'].iloc[i]),int(table['y max'].iloc[i])) ) #дата
+    img = image.crop( (int(table['x min'].iloc[i]),int(table['y min'].iloc[i]),int(table['x max'].iloc[i]),int(table['y max'].iloc[i])) ) #дата
     img.save('cropp_'+str(i)+'.jpg')
     img = cv2.imread('cropp_'+str(i)+'.jpg')
     img = Image.fromarray(cv2.GaussianBlur(img,(3,3),0))
@@ -85,7 +85,8 @@ for img in images_new:
     tex = tesserocr.image_to_text(img, lang='rus')
     tex = tex.replace(',', '.').replace("\n", '').replace("’", '').replace("'", '').replace('"', '').replace("?", '').replace("‘", '')
     text.append(tex) 
-
+for i in range(len(text),8):
+    text.append('')
 # Структурируем информацию в словаре    
 data = {
     "number": text[0],
