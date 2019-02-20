@@ -1,9 +1,10 @@
 FROM ubuntu:16.04
 
+
 RUN apt-get update && yes | apt-get upgrade
 RUN mkdir -p /tensorflow/models
 RUN apt-get install -y git python3 python3-dev python3-pip
-RUN apt-get install python3-pyqt5
+RUN apt-get install -y python3-pyqt5
 RUN pip3 install --upgrade pip
 RUN pip3 install tensorflow
 RUN apt-get install -y protobuf-compiler python3-pil python3-lxml
